@@ -2,8 +2,9 @@ import os
 import sys
 import pandas as pd
 import numpy as np
-from src.exceptions import CustomException
+from src.exception import CustomException
 from sklearn.metrics import r2_score
+import dill
 
 def save_object(file_path,obj):
     try:
