@@ -1,6 +1,7 @@
 import os
 import sys
 from dataclasses import dataclass
+import pickle
 
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
@@ -31,11 +32,6 @@ class model_trainer:
             #     models = models
             # )
             
-            # save_object(
-            #     file_path = self.model_trainer_config.trained_model_file_path,
-            #     obj = LinearRegression
-            # )
-            
             lr = LinearRegression()
             lr.fit(x_train,y_train)
             y_pred = lr.predict(x_test)
@@ -43,6 +39,12 @@ class model_trainer:
             # r2_score = r2_score(y_test,y_pred)
             
             x = lr.score(x_train, y_train)
+            
+            logging.info("Model saving is started...")
+            
+            pickle.dump(lr, open('artifacts/model.pkl','wb'))
+            
+            logging.info("ML model saved...")
             
             return x
         

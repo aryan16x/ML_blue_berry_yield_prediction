@@ -1,0 +1,95 @@
+<html>
+<body>
+    <div class="login">
+       <h1>blue berry yield prediction</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <div class="mb-3">
+            <label class="form-label">Clonesize</label>
+            <input class="form-control" type="number" step="any" name="Clonesize"
+                placeholder="Clonesize"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">honeybee</label>
+            <input class="form-control" type="number" step="any" name="honeybee"
+                placeholder="honeybee"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">bumbles</label>
+            <input class="form-control" type="number" step="any" name="bumbles"
+                placeholder="bumbles"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">andrena</label>
+            <input class="form-control" type="number" step="any" name="andrena"
+                placeholder="andrena"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">osmia</label>
+            <input class="form-control" type="number" step="any" name="osmia"
+                placeholder="osmia"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">MaxOfUpperTRange</label>
+            <input class="form-control" type="number" step="any" name="MaxOfUpperTRange"
+                placeholder="MaxOfUpperTRange"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">MinOfUpperTRange</label>
+            <input class="form-control" type="number" step="any" name="MinOfUpperTRange"
+                placeholder="MinOfUpperTRange"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">AverageOfUpperTRange</label>
+            <input class="form-control" type="number" step="any" name="AverageOfUpperTRange"
+                placeholder="AverageOfUpperTRange"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">MaxOfLowerTRange</label>
+            <input class="form-control" type="number" step="any" name="MaxOfLowerTRange"
+                placeholder="MaxOfLowerTRange"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">MinOfLowerTRange</label>
+            <input class="form-control" type="number" step="any" name="MinOfLowerTRange"
+                placeholder="MinOfLowerTRange"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">AverageOfLowerTRange</label>
+            <input class="form-control" type="number" step="any" name="AverageOfLowerTRange"
+                placeholder="AverageOfLowerTRange"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">RainingDays</label>
+            <input class="form-control" type="number" step="any" name="RainingDays"
+                placeholder="RainingDays"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">AverageRainingDays</label>
+            <input class="form-control" type="number" step="any" name="AverageRainingDays"
+                placeholder="AverageRainingDays"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">fruitset</label>
+            <input class="form-control" type="number" step="any" name="fruitset"
+                placeholder="fruitset"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">fruitmass</label>
+            <input class="form-control" type="number" step="any" name="fruitmass"
+                placeholder="fruitmass"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">seeds</label>
+            <input class="form-control" type="number" step="any" name="seeds"
+                placeholder="seeds"/>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict the yield" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
